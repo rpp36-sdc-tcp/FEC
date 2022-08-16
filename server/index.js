@@ -83,8 +83,8 @@ app.get("/reviews", (req, res) => {
 
 app.post('/reviews', (req, res) => {
   axios.post(
-    `https://app-hrsei-api.herokuapp.com/api/fec2/hr-rpp/reviews`,
-    //`https://localhost:3001/reviews`,
+    //`https://app-hrsei-api.herokuapp.com/api/fec2/hr-rpp/reviews`,
+    `https://localhost:3001/reviews`,
     req.body,
     { headers: {
       'Authorization': myAPIKey
@@ -104,7 +104,7 @@ app.get('/reviews/meta', (req, res) => {
   axios
     .get(
       `https://app-hrsei-api.herokuapp.com/api/fec2/hr-rpp/reviews/meta?product_id=${productId}`,
-      //`https://localhost:3001/reviews/meta?product_id=${productId}`,
+      //`http://localhost:3001/reviews/meta?product_id=${productId}`,
       {
         headers: {
           Authorization: myAPIKey,
